@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# 检查输入参数数量是否正确
+if [ "$#" -ne 8 ]; then
+    echo "Error: Invalid number of parameters."
+    echo "Usage: $0 <batch size> <input channel> <output channel> <input height> <input width> <tune num> <ARCH(x86/arm/amd)> <thread>"
+    exit 1
+fi
+
 # 输入参数
 b=$1
 ic=$2

@@ -41,8 +41,8 @@ echo "Winograd F43 MACs: $macs_f43"
 # 选择脚本逻辑
 if (( flops_f63 < flops_f43 )); then
     echo "Executing python3.8 winograd_f63_nhwc_offline_fusion_prepack.py -b $b -ic $ic -oc $oc -H $H -W $W -n $n -a $a -t $t"
-    python3.8 winograd_f63_nhwc_offline_fusion_prepack.py -b $b -ic $ic -oc $oc -H $H -W $W -n $n -a $a -t $t
+    python3 winograd_f63_nhwc_offline_fusion_prepack.py -b $b -ic $ic -oc $oc -H $H -W $W -n $n -a $a -t $t
 else
     echo "Executing winograd_f43_nhwc_offline_fusion_prepack.py -b $b -ic $ic -oc $oc -H $H -W $W -n $n -a $a -t $t"
-    python3.8 winograd_f43_nhwc_offline_fusion_prepack.py -b $b -ic $ic -oc $oc -H $H -W $W -n $n -a $a -t $t
+    python3 winograd_f43_nhwc_offline_fusion_prepack.py -b $b -ic $ic -oc $oc -H $H -W $W -n $n -a $a -t $t
 fi
